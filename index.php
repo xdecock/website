@@ -76,8 +76,7 @@ header('Last-Modified: '.date(DATE_RFC1123, $lastModified));
     			include($contentFile);
     		} else {
 				include(__DIR__.'/libs/php-markdown/markdown.php');
-    			$md = new Markdown_Parser();
-    			echo $md->transform(file_get_contents($contentFile));
+    			echo Markdown(file_get_contents($contentFile));
     		}
     		?>
         </div>
