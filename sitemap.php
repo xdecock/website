@@ -35,7 +35,7 @@ if (file_exists(__DIR__.'/config.php')) {
 		$siteMaps['lastmod'] = date('c', $lastModified);
 		?>
 		<url>
-			<loc>http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo htmlspecialchars($pageName).'.php';?></loc>
+			<loc>http://<?php echo $_SERVER['HTTP_HOST']?>/<?php echo htmlspecialchars($pageName);?></loc>
 			<priority><?php echo $siteMaps['priority'];?></priority>
 			<changefreq><?php echo $siteMaps['changefreq']; ?></changefreq>
 			<lastmod><?php echo $siteMaps['lastmod']; ?></lastmod>
