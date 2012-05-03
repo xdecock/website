@@ -11,7 +11,7 @@ $contentFile=dirname(__FILE__).'/content/'.$pageName;
 $existsPHP = file_exists($contentFile.'.php');
 $existsTxt = false;
 if (!$existsPHP) {
-	$existTxt = file_exists($contentFile.'.txt');
+	$existsTxt = file_exists($contentFile.'.txt');
 } 
 if (!$existsTxt && !$existsPHP) {
 	// 404
