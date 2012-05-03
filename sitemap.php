@@ -2,7 +2,7 @@
 header('Content-Type: application/xml');
 $headVariables = $config = array();
 include (__DIR__.'/config.default.php');
-if (file_exists(include (__DIR__.'/config.php'))) {
+if (file_exists(__DIR__.'/config.php')) {
 	include (__DIR__.'/config.php');
 }
 ?>
