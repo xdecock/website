@@ -20,7 +20,7 @@ if (!$existsTxt && !$existsPHP) {
 	die();
 }
 /* Grab Config */
-$config = $headVariables = array();
+$config = $headVariables = $pageMenu = array();
 include (__DIR__.'/config.default.php');
 if (file_exists(__DIR__.'/config.php')) {
 	include (__DIR__.'/config.php');
