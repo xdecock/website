@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?([a-zA-Z0-9_]*)$ /index.php?page=$1 [QSA]
+RewriteRule ^/?sitemap.xml /sitemap.php [L]
+php_value zlib.output_compression on
