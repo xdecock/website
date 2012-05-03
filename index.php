@@ -22,7 +22,7 @@ if (!$existsTxt && !$existsPHP) {
 /* Grab Config */
 $config = $headVariables = array();
 include (__DIR__.'/config.default.php');
-if (file_exists(include (__DIR__.'/config.php'))) {
+if (file_exists(__DIR__.'/config.php')) {
 	include (__DIR__.'/config.php');
 }
 /* Grab Metas */
@@ -75,6 +75,7 @@ header('Last-Modified: '.date(DATE_RFC1123, $lastModified));
     		if ($mode == 'PHP') {
     			include($contentFile);
     		} else {
+				include(__DIR__.'/libs/php-markdown/markdown.php');
     			$md = new Markdown_Parser();
     			echo $md->transform(file_get_contents($contentFile));
     		}
